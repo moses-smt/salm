@@ -1,0 +1,24 @@
+/**
+* \defgroup index Indexing the corpus
+* \defgroup search Search Applications
+* \defgroup scan Scan Applications
+* \defgroup lm Suffix Array Language Model
+* \defgroup utils Utilities
+*
+* \mainpage SALM API Documentation
+*	Author: <a href=mailto:joy+salm@cs.cmu.edu > Ying (Joy) Zhang </a>
+*	\section intro Introduction
+*
+*	There are three main modules in <a href=http://projectile.is.cs.cmu.edu/research/public/tools/salm/salm.htm > SALM </a> : Indexing, Searching and Scanning.
+*	To start, use IndexSA to index the corpus according to its suffix array.
+*	This is the first step for all applications.
+*	Once the corpus is indexed. We can use SALM to do all kinds of interesting process on this corpus.
+*	\section search Applications based on searching the corpus
+*	These applications searches for the occurrences of an n-gram or all the embedded n-grams of a sentence in the corpus.
+*	\section scan Applications based on scanning the corpus
+*	These applications scan through the corpus in a linear time and collects information such as the type/token frequency of the n-grams in the data.
+*	\section lm Suffix Array Language Model
+*	An online language model based on the suffix array indexing. Suffix array language model can use arbitrarily long history and very large corpus.
+*	\section utils Utilities
+*	Utility functions such as updating the universal ID vocabulary after observing a new corpus
+**/

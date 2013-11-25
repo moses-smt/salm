@@ -1,0 +1,70 @@
+SALM: Suffix Array tool kit for empirical Language Manipulations.
+By Joy, joy@cs.cmu.edu
+
+1) Download the source code from: http://projectile.is.cs.cmu.edu/research/public/tools/salm/salm.htm or http://www.sourceforge.net/projects/salm
+2) Build binaries:
+	a) For Linux platform:
+		cd Distribution/Linux
+		make allO32 (for 32-bit platform)
+		or
+		make allO64 (for 64-bit platform)
+		
+		Binaries are created under Bin/Linux
+		
+	b) For Win32 platform
+		open project files under Distribution/Win32 and use Visual C++ to build executables.
+		Executables are placed under Bin/Win32
+		
+3) Index a corpus.
+	The first step is to index a corpus using IndexSA program.
+	There is no limitation to the size of the corpus as long as there is enough RAM.
+	A corpus of N words requires 9N bytes memory during indexing.
+	
+	Another constraint is that no sentence can have more than 254 words.
+	
+	Synposis of IndexSA:
+		IndexSA corpusFileName [existingIDVocabularyFile]
+	
+	Optional existingIDVocabularyFile can be used to specify an existing vocabulary.
+	It will be updated if the words in the corpus are new to the exising vocabulary.
+	This is useful if several corpora want to share a common vocabulary.
+	
+
+4) Applications
+	The key functions to suffix array applications are provided in class C_SuffixArraySearchApplicationBase and C_SuffixArrayScanningBase
+	Please check the documentation and API for more details.
+	
+	Sample programs such as:
+	
+		FrequencyOfNgrams: 
+			Output the frequency of an n-gram in the training corpus
+			
+		NGramMatchingStat4TestSet		
+			Output the n-gram token matching statistics of a testing data
+	
+		NgramTypeInTestSetMatchedInCorpus
+			Output the n-gram type matching statistics of a testing data
+			
+		NgramMatchingFreq4Sent
+			Output the frequencies of all the embedded n-grams in a sentence
+			
+		NgramMatchingFreqAndNonCompositionality4Sent
+			Output the non-compositionalities of the embedded n-grams in a sentence
+			
+		FilterDuplicatedSentences
+			Filter out duplicated sentences in the training corpus and output the unique ones
+					
+		CollectNgramFreqCount
+			Given a list of n-grams and a list of traing corpus indexed by their suffix array, collect counts of n-grams in these corpus. E.g. given a Chinese word list, one can collect the frequency of these words (as character n-grams) from several large corpora (segmented into characters).
+
+		CalcCountOfCounts
+			Output the count-of-counts information of a corpus
+			
+		OutputHighFreqNgram
+			Specified by a configuration file, output the n-gram types that have frequencies higher than the threshold
+	
+		TypeTokenFreqInCorpus
+			Output the type/token statistics of the corpus
+
+5) Quesitons, comments and suggestions?
+Please email joy+salm@cs.cmu.edu

@@ -1,0 +1,34 @@
+
+#include "_SuffixArrayScanningBase.h"
+#include "stdio.h"
+#include "stdlib.h"
+#include <iostream>
+#include <fstream>
+#include <map>
+
+using namespace std;
+
+/**
+* Given a corpus indexed by its suffix array, output the count-of-count information
+* Revision $Rev: 3665 $
+* Last Modified $LastChangedDate: 2007-06-16 15:40:59 -0400 (Sat, 16 Jun 2007) $
+**/
+int main(int argc, char * argv[]){
+	//-----------------------------------------------------------------------------
+	//check parameter
+	//-----------------------------------------------------------------------------
+	if(argc<4){
+		fprintf(stderr,"\nGiven an indexed corpus, output the count of counts for n-grams.\n");
+		fprintf(stderr,"\nUsage:\n");
+		fprintf(stderr,"\n%s fileNameStem maxN maxFreq\n\n",argv[0]);		
+		exit(0);
+	}
+	
+	unsigned int maxN = atoi(argv[2]);
+	unsigned int maxFreq = atoi(argv[3]);
+
+	C_SuffixArrayScanningBase saObj(argv[1], maxN);	
+	saObj.scanSuffixArrayForCountofCounts(maxFreq);
+
+	return 1;
+}
