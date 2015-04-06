@@ -5,7 +5,6 @@
 
 #include "_SuffixArrayApplicationBase.h"
 
-#include "malloc.h"
 #include "time.h"
 
 #include <iostream>

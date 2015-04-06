@@ -5,10 +5,9 @@
 **/
 
 #include "_String.h"
-#include "malloc.h"
 #include "string.h"
 #include "stdio.h"
-#include "stdlib.h"
+#include <stdlib.h>
 
 //////////////////////////////////////////////////////////////////////
 // Construction/Destruction
