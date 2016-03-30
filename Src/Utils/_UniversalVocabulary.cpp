@@ -1,5 +1,4 @@
 #include "_UniversalVocabulary.h"
-#include "malloc.h"
 #include <string>
 #include <fstream>
 #include <iostream>
