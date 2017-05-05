@@ -50,6 +50,7 @@ SHARED_OBJ_o64 = \
 	${SA_SHARED_OBJ_DIR}/_IDVocabulary.o64	\
 	${SA_SHARED_OBJ_DIR}/_String.o64	\
 
+all: allO64
 #
 # Target to create all 32-bit optimized binaries
 allO32 : CREATE_DIR	\
