@@ -156,7 +156,7 @@ void C_MonoCorpus::loadCorpusAndSort(const char *fileName, const char * idVocFil
 	ifstream textStream1;
 	textStream1.open(fileName);
 
-	if(textStream1==NULL){
+	if(!textStream1){
 		fprintf(stderr,"Text %s does not exist. Exit!\n",fileName);
 		exit(-1);
 	}
