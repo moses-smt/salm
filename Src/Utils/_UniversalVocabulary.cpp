@@ -40,7 +40,7 @@ void C_UniversalVocabulary::updateWithNewCorpus(const char * newCorpusFileName)
 	ifstream textStream;
 	textStream.open(newCorpusFileName);
 
-	if(textStream==NULL){
+	if(!textStream){
 		fprintf(stderr,"Corpus file %s does not exist. Exit!\n",newCorpusFileName);
 		exit(-1);
 	}
